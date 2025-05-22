@@ -55,20 +55,15 @@ class _MyHomePageState extends State<MyHomePage> {
             SnackBar(content: Text('Floating Action Button Pressed')),
           );
         },
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
         backgroundColor: Colors.green,
+        child: Icon(Icons.add, color: Colors.white),
       ),
       drawer: Drawer(
         child: ListView(
           padding: const EdgeInsets.all(0),
           children: [
             const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.green,
-              ), // BoxDecoration
+              decoration: BoxDecoration(color: Colors.green), // BoxDecoration
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Colors.green),
                 accountName: Text(
@@ -136,15 +131,10 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
+              decoration: BoxDecoration(color: Colors.blue),
               child: Text(
                 'End Drawer',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
+                style: TextStyle(color: Colors.white, fontSize: 24),
               ),
             ),
             ListTile(
@@ -158,35 +148,21 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.green,
         onTap: _onItemTapped,
       ),
       persistentFooterButtons: <Widget>[
-        TextButton(
-          onPressed: () {},
-          child: Text('Footer Button 1'),
-        ),
-        TextButton(
-          onPressed: () {},
-          child: Text('Footer Button 2'),
-        ),
+        TextButton(onPressed: () {}, child: Text('Footer Button 1')),
+        TextButton(onPressed: () {}, child: Text('Footer Button 2')),
       ],
       backgroundColor: Colors.white,
       resizeToAvoidBottomInset: false,
+      // ignore: deprecated_member_use
       drawerScrimColor: Colors.black.withOpacity(0.5),
     );
   }
