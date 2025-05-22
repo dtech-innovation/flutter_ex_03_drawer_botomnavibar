@@ -49,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(fontSize: 24, color: Colors.black),
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           ScaffoldMessenger.of(context).showSnackBar(
